@@ -22,6 +22,6 @@ kubectl apply -f zabbix.yaml<br
   kubectl apply -f zabbix-ui.yaml<br>
   
   now if you go to http://any_node_ip:30080 you should be able to see zabbix login.<br>
-  username:Admin <br
-  password: zabbix
+  <b>username:<b/> Admin <br
+  <b>password:</b> zabbix
   
