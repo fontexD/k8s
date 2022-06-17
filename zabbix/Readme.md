@@ -1,9 +1,9 @@
 1.
-<b>First create the namespaces:</b>
+<b>First create the namespaces:</b><br>
 kubectl apply -f namespace.yaml
 
 2.
-<b>Create the pvc for mysql:</b>
+<b>Create the pvc for mysql:</b><br>
 kubectl apply -f pvc.yaml
 
 3.
