@@ -5,6 +5,7 @@ kubectl apply -f namespace.yaml
 2.
 <b>Create the pvc for mysql:</b>
 kubectl apply -f pvc.yaml
+
 3.
 <b>create zabbix user in mysql:</b>
 mysql -u root -p
