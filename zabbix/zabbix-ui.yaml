@@ -40,7 +40,7 @@ spec:
         - name: DB_SERVER_HOST
           value: "mysql.ops-services.svc.cluster.local"
         - name:  ZBX_SERVER_HOST
-          value: "<zabbix-server-address>"
+          value: "zabbixserver.zabbix.svc.cluster.local"
         - name: MYSQL_USER
           value: "zabbix"
         - name: MYSQL_PASSWORD
