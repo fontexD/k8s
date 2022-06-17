@@ -1,7 +1,3 @@
-Pre.
-
-configure 
-
 1.
 <b>First create the namespaces:</b><br>
 kubectl apply -f namespace.yaml
@@ -22,7 +18,7 @@ CREATE USER 'zabbix'@'%'IDENTIFIED WITH mysql_native_password BY 'password';<br>
 but first correct the zabbx mysql pass in the zabbix.yaml same for zabix-ui.yaml<br>
 kubectl apply -f zabbix.yaml<br
 5.<br>
-  now apply the web-ui , correct the pass if not already done, and the zabbix-server address by default its zabbixserver.zabbix.svc.cluster.local<br>
+  <b>now apply the web-ui , correct the pass if not already done, and the zabbix-server address by default its zabbixserver.zabbix.svc.cluster.local</b><br>
   kubectl apply -f zabbix-ui.yaml<br>
   
   now if you go to http://any_node_ip:30080 you should be able to see zabbix login.<br>
