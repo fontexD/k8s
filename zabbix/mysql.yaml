@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+  namespace: ops-services
+spec:
+  selector:
+    app: mysql
+    env: ops-services
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+  type: ClusterIP
+  externalIPs:
+  - 192.168.10.220 #change this to ip of any of the nodes in the cluster
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: ops-services
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+      env: ops-services
+  template:
+    metadata:
+      labels:
+        app: mysql
+        env: ops-services
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:latest
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "<password>"
+        volumeMounts:
+        - name: mysql-pv
+          mountPath: /var/lib/mysql
+        - name: mysql-config
+          mountPath: /etc/mysql/conf.d
+      volumes:
+      - name: mysql-pv
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
+      - name: mysql-config
+        configMap:
+          name: mysql-config
