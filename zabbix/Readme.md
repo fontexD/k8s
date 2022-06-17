@@ -12,4 +12,6 @@ kubectl exec -it -n ops-services <mysql-pod-name> -- sh <br>
 mysql -u root -p
 
 CREATE USER 'zabbix'@'%'IDENTIFIED WITH mysql_native_password BY 'password';
-  
+4.
+<b>now start the zabbix server and agent</b><br>
+kubectl apply -f zabbix.yaml
