@@ -1,3 +1,12 @@
+# Build upon this project https://github.com/samba-in-kubernetes/samba-container 
+# did some changes to config and created as deployment
+# change all FONTEX.LOCAL to your ad domain and add password for a bind account
+# create a service and expose the pod
+#kubectl expose pod <podname -n smb --port=445 --type=ClusterIP
+# to access it external edit he svd and in the bottom add
+#externalIPs:
+#- <ip-address>
+# now you can mount the smb at \\<ip-address\webfile 
 apiVersion: v1
 data:
   config.json: |-
@@ -82,7 +91,7 @@ metadata:
   name: webfile
   namespace: smb
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: samba
