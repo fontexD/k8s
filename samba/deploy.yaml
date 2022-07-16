@@ -3,7 +3,7 @@
 # change all FONTEX.LOCAL to your ad domain and add password for a bind account
 # create a service and expose the pod
 #kubectl expose pod <podname -n smb --port=445 --type=ClusterIP
-# to access it external edit he svd and in the bottom add
+# to access it external edit the svc and in the bottom add
 #externalIPs:
 #- <ip-address>
 # now you can mount the smb at \\<ip-address\webfile 
