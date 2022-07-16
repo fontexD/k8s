@@ -1,6 +1,7 @@
 # Build upon this project https://github.com/samba-in-kubernetes/samba-container 
 # did some changes to config and created as deployment
 # change all FONTEX.LOCAL to your ad domain and add password for a bind account
+# it requires a reverser-lookup zone on your dns!
 # create a service and expose the pod
 #kubectl expose pod <podname -n smb --port=445 --type=ClusterIP
 # to access it external edit the svc and in the bottom add
