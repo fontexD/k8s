@@ -203,7 +203,7 @@ spec:
         env: kafka
     spec:
       imagePullSecrets:
-        - name: prooffice.azurecr.io
+        - name: repo_secret
       volumes:
         - name: kafka-pv-claim
           persistentVolumeClaim:
@@ -218,7 +218,7 @@ spec:
             defaultMode: 0777
       containers:
         - name: kafka-container
-          image: prooffice.azurecr.io/kafka3:latest
+          image: kafka 3.3_image_from_local_repo
           imagePullPolicy: Always
           resources:
             requests:
