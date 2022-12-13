@@ -99,8 +99,8 @@ Next up is to install the Sidero components in your K8s providing all the requir
 
 ````
 export SIDERO_CONTROLLER_MANAGER_HOST_NETWORK=true
-export SIDERO_CONTROLLER_MANAGER_API_ENDPOINT=192.168.1.150 *
-export SIDERO_CONTROLLER_MANAGER_SIDEROLINK_ENDPOINT=192.168.1.150 *
+export SIDERO_CONTROLLER_MANAGER_API_ENDPOINT=192.168.10.169  *
+export SIDERO_CONTROLLER_MANAGER_SIDEROLINK_ENDPOINT=192.168.10.169  *
 
 clusterctl init -b talos -c talos -i sidero
 ````
