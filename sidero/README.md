@@ -143,7 +143,7 @@ Now its time to configure your DHCP server with the config for the pxe-boot node
  ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/ubiquiti.png)
  
 ### Serverclass and Environment
-
+---
 So when a server is created in KVM it will get the pxe-boot from our current setup, and it will be added to the default serverclass called any, but we have to tell sidero metal where the disk device is located, so we must patch the default serverclass called any and add the shown config in the red area on the imae, after spec
  ```
  kubetcl edit serverclass any
@@ -162,12 +162,24 @@ Now you have to add auto-acceptance of servers so it accept em into the server-s
  kubectl edit server <server_id>
  ```
 and change the field acceptet to true
- 
-    
+
+for auto-accept edit the sidero deployment
+ ```
+kubectl edit deploy -n sidero-system sidero-controller-manager
+ ```
+change the red-marked field to true from false
+![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/autoaccept.png)
+
+
 Time to update the TalosOS versions from V0.14.00 (default) to V1.2.7, its used to install the node os, all fields must be 1.2.7 to change this
 ```
 kubectl edit environment default
 ```
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/environment.png)
+
+Now we are ready to Deploy the first node! im gonna create this with the Cockpit Web-ui from centOS, but can be done in any way wanted, this is how it should look
+
+![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/vm.png)
+
 </body>
 </html>
