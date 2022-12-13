@@ -4,7 +4,7 @@
 <body>
 
 ## Sidero Metal - Automation at the next level
-
+![alt text](https://github.com/fontexD/k8s/blob/main/sidero/logo.svg)
 
 <i>What ive used in this Article</i>
 
