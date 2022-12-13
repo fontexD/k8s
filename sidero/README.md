@@ -2,17 +2,6 @@
 <link rel="stylesheet" type="text/css" href="https://legoman8304.github.io/style.css">
 <html>
     <body>
-        <h1>Hello World</h1>
-        <p>I'm under construction!</p>
-        <h6>Copyright MIT Licence 2018</h6>
-    </body>
-</html>
-
-.screen-reader-text { /* Reusable, toolbox kind of class */
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
 
 
 ## Sidero Metal - Automation at the next level
@@ -65,3 +54,6 @@ prerequisite
 - A k8s-cluster or single node dosent matter
 - Dhcp Server witht the ability to add option 66 and 67
 - 
+        
+    </body>
+</html>
