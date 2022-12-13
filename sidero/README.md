@@ -134,7 +134,7 @@ curl -I http://192.168.10.169:8081/tftp/ipxe.efi
     
 It should return a 200 http response!
 
-Now its time to configure your DHCP server with the config for the pxe-boot nodes we are gonna use to create a Cluster, in the option field 66 add the ip which was assiged as externalIP earlier, in my setup i use Ubiquiti DHCP as shown below, for refrence on DHCP setup from Sidero Metal https://www.sidero.dev/v0.5/getting-started/prereq-dhcp/
+Now its time to configure your DHCP server with the config for the pxe-boot nodes we are gonna use to create a Cluster, in the option field 66 and 67 add the ip which was assiged as externalIP earlier in option 66, in option 67 define the filename <i>undionly.kpxe</i> in my setup i use Ubiquiti DHCP as shown below, for refrence on DHCP setup from Sidero Metal https://www.sidero.dev/v0.5/getting-started/prereq-dhcp/
  ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/ubiquiti.png)
     
 </body>
