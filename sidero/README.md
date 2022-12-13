@@ -57,9 +57,9 @@ All of these areas are improved simply by having less.
         
 ## Lets get onto it!
 ---
-| Server | IP |
+| Server's | IP |
 | ------------- | ------------- |
-| ControlPLane  | 192.168.10.169  |
+| Control-Plane  | 192.168.10.169  |
 | LIbvirt-Server  | 192.168.10.22  |
 
     
@@ -67,7 +67,8 @@ All of these areas are improved simply by having less.
 - A k8s-cluster or single node dosent matter
 - Dhcp Server with the ability to add option 66 and 67
 - Kvm/Libvirt Host
-        
+
+<i>In this example im using a single node k8s-cluster, so rmemeber to remove taints from the controlplane if following this, else just deploy it on a worker node.</i>
         
 First of all is to install the Cli-Tools to make all of this possible
         
