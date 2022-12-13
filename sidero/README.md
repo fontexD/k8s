@@ -185,5 +185,49 @@ set boot to network define vcpu and memoory as desired, set os to unknown and st
 
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/vm.png)
 
+    
+Now to the fun part! defining and creating our cluster!
+    
+First is to get the ip or the node that is in the server-farm for Sidero
+```
+kubectl get servers
+```
+![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/serverready.png)
+ 
+    
+To define the cluster export following variables
+ 
+
+``` 
+export CONTROL_PLANE_SERVERCLASS=any
+export WORKER_SERVERCLASS=any
+export TALOS_VERSION=v1.2.7
+export KUBERNETES_VERSION=v1.24.4
+export CONTROL_PLANE_PORT=6443
+export CONTROL_PLANE_ENDPOINT=192.168.10.228
+```
+then use the clusterctl to create the definition files for our cluster
+```
+clusterctl generate cluster cluster-0 -i sidero > cluster-0.yaml
+```
+    
+The cluster-0.yaml defines our cluster, telling what os version for the nodes, which k8s version, and how many controlplane and workers we want to build, this can always later on be changed and applied for adding more nodes! it will do everything for you!
+if you want to create a HA cluster then you would need to create a haproxy which would loadbalance between the nodee, and use that as the endpoint in the export variable CONTROL_PLANE_ENDPOINT, by default 1 controlplane is created defined by he replicas
+    
+Time to create the cluster!
+```
+kubectl apply -f cluster-0.yaml
+```
+it takes around 2-5 minutes for it to come up
+now we can get the kubeconfig with the clusterctl cli
+
+```
+clusterctl get kubeconfig cluster-0
+```
+![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/clusterctl.png)
+
+![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/powershell.png)
+    
+We have successfully created a cluster now! , if we want workers simply create the vm with network-boot, open the cluster-o.yaml, edit the workers machineDeployment replicas to any desired number of workers, and apply the file again.
 </body>
 </html>
