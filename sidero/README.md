@@ -52,7 +52,7 @@ All of these areas are improved simply by having less.
         
 ## Lets get onto it!
         
- ---------
+ ---
 <b>Prerequisite</b>
 - A k8s-cluster or single node dosent matter
 - Dhcp Server with the ability to add option 66 and 67
