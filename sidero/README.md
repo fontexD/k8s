@@ -21,7 +21,7 @@
 <br>
 <br>
 
-But it does require some maintanence and understandig of Ansible , Terraform and the whole mangement part of this including you have to spend time keeping your OS for every node up to date, installing required packages, making sure there is no broken parts on your os, all this taking your time from atually using k8s and not just keeping it alive and up to date!
+But it does require some maintanence and understandig of Ansible , Terraform and the whole mangement part of this including you have to spend time keeping your OS for every node up to date, installing required packages, making sure there is no broken parts on your os, all this taking your time from actually using k8s and not just keeping it alive and up to date!
 
 ## So what is Sidero Metal and TalosOs? 
 
