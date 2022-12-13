@@ -2,6 +2,8 @@
 ## Sidero Metal - Automation at the next level
 
 
+What ive used in this Article
+
 | Application | Version |
 | ------------- | ------------- |
 | Kubernetes  | 1.24.0  |
