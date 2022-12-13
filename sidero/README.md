@@ -188,7 +188,7 @@ set boot to network define vcpu and memoory as desired, set os to unknown and st
     
 Now to the fun part! defining and creating our cluster!
     
-First is to get the ip or the node that is in the server-farm for Sidero
+First is to get the ip from the node that is in the server-farm for Sidero
 ```
 kubectl get servers
 ```
