@@ -23,7 +23,7 @@
 
 But it does require some maintanence and understandig of Ansible , Terraform and the whole mangement part of this including you have to spend time keeping your OS for every node up to date, installing required packages, making sure there is no broken parts on your os, all this taking your time from actually using k8s and not just keeping it alive and up to date!
 
-## So what is Sidero Metal and TalosOs? 
+## So what is Sidero Metal and Talos Os? 
 
 ### Sidero Metal
 Sidero (“Iron” in Greek) is a project created by the Sidero Labs team. Sidero Metal provides lightweight, composable tools that can be used to create bare-metal Talos Linux + Kubernetes clusters. These tools are built around the Cluster API project.
