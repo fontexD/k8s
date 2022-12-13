@@ -228,6 +228,6 @@ clusterctl get kubeconfig cluster-0
 
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/powershell.png)
     
-We have successfully created a cluster now! , if we want workers simply create the vm with network-boot, open the cluster-o.yaml, edit the workers machineDeployment replicas to any desired number of workers, and apply the file again.
+The cluster have been successfully created! to add worker nodes simply create the vm(s) with network-boot, open the cluster-o.yaml, edit the workers machineDeployment replicas to any desired number of workers, and apply the file again.
 </body>
 </html>
