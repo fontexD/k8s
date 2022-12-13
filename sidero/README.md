@@ -156,12 +156,18 @@ So when a server is created in KVM it will get the pxe-boot from our current set
     value: /dev/sda
  ```
 
-Now we have to add auto-acceptance of servers so it accept em into the server-stack,¨' it can also be done by manually edit the server after its found by using 
+Now you have to add auto-acceptance of servers so it accept em into the server-stack,¨' it can also be done by manually edit the server after its found by using 
  ```
  kubetcl get server
  kubectl edit server <server_id>
  ```
 and change the field acceptet to true
  
+    
+Time to update the TalosOS versions from V0.14.00 (default) to V1.2.7, its used to install the node os, all fields must be 1.2.7 to change this
+```
+kubectl edit environment default
+```
+![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/environment.png)
 </body>
 </html>
