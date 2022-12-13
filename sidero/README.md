@@ -26,7 +26,7 @@ Sidero (“Iron” in Greek) is a project created by the Sidero Labs team. Sider
 
 Because of the design of Cluster API, there is inherently a “chicken and egg” problem: you need an existing Kubernetes cluster in order to provision the management plane, that can then provision more clusters. The initial management plane cluster that runs the Sidero Metal provider does not need to be based on Talos Linux - although it is recommended for security and stability reasons. The Getting Started guide will walk you through installing Sidero Metal either on an existing cluster, or by quickly creating a docker based cluster used to bootstrap the process
 
-// Description from Sidero Metal Site https://www.sidero.dev/v0.5/overview/introduction/
+#### Description from Sidero Metal Site https://www.sidero.dev/v0.5/overview/introduction/
 
 
 ### Talos os
@@ -46,7 +46,7 @@ In having less, Talos offers more. Security. Efficiency. Resiliency. Consistency
 
 All of these areas are improved simply by having less.
 
-// Description from Talos Os Site h[ttps://www.sidero.dev/v0.5/overview/introduction/](https://www.talos.dev/v1.2/introduction/what-is-talos/)
+#### Description from Talos Os Site h[ttps://www.sidero.dev/v0.5/overview/introduction/](https://www.talos.dev/v1.2/introduction/what-is-talos/)
 <br>
 <br>
         
@@ -60,9 +60,10 @@ All of these areas are improved simply by having less.
         
 First of all is to install the Cli-Tools to make all of this possible
         
-        Install this on your K8s-Cluster controlplane Node
+Install this on your K8s-Cluster controlplane Node
         
-1. TalosCtl 
+1. TalosCtl
+     
 '''
 sudo curl -Lo /usr/local/bin/talosctl \
 "https://github.com/talos-systems/talos/releases/latest/download/talosctl-$(uname -s | tr '[:upper:]' '[:lower:]')-amd64"
