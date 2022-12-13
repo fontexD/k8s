@@ -176,7 +176,8 @@ Time to update the TalosOS versions from V0.14.00 (default) to V1.2.7, its used 
 kubectl edit environment default
 ```
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/environment.png)
-
+<br>
+<br>
 <b>Now</b> we are ready to Deploy the first node! im gonna create this with the Cockpit Web-ui from centOS, but can be done in any way wanted.
     
 This is how it should be created,
