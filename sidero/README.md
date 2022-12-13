@@ -46,7 +46,7 @@ In having less, Talos offers more. Security. Efficiency. Resiliency. Consistency
 
 All of these areas are improved simply by having less.
 
-#### Description from Talos Os Site h[ttps://www.sidero.dev/v0.5/overview/introduction/](https://www.talos.dev/v1.2/introduction/what-is-talos/)
+#### Description from Talos Os Site https://www.sidero.dev/v0.5/overview/introduction/](https://www.talos.dev/v1.2/introduction/what-is-talos/)
 <br>
 <br>
         
