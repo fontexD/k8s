@@ -47,9 +47,10 @@ In having less, Talos offers more. Security. Efficiency. Resiliency. Consistency
 All of these areas are improved simply by having less.
 
 // Description from Talos Os Site h[ttps://www.sidero.dev/v0.5/overview/introduction/](https://www.talos.dev/v1.2/introduction/what-is-talos/)
-
-
-Lets get onto it!
+<br>
+<br>
+        
+##Lets get onto it!
 
 prerequisite
 - A k8s-cluster or single node dosent matter
