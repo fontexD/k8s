@@ -3,7 +3,7 @@
 <html>
 <body>
 
-## Sidero Metal - Automation at the next level
+## Sidero Metal - K8s Automation at the next level
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/logo.jpg)
 
 <i>What ive used in this Article</i>
