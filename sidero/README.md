@@ -98,5 +98,22 @@ export SIDERO_CONTROLLER_MANAGER_SIDEROLINK_ENDPOINT=192.168.1.150 *
 clusterctl init -b talos -c talos -i sidero
 ````
 <i>* This must be your Controle-plane node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes </i>
+
+Next part is to open the services from sidero-system to for access from outside of the cluster, there are different ways to archive this, in this example ill use externalIP, this is nesswecary for following services in namespace sidero-system!
+- sidero-http
+- sidero-siderolink
+- sidero-tftp
+
+A Easy way to add this to your services is with following command
+
+kubectl patch svc sidero-http -n sidero-system -p '{"spec": {"type": "ClusterIP", "externalIPs":["192.168.10.169"]}}'
+kubectl patch svc sidero-siderolink -n sidero-system -p '{"spec": {"type": "ClusterIP", "externalIPs":["192.168.10.169"]}}'
+kubectl patch svc sidero-tftp -n sidero-system -p '{"spec": {"type": "ClusterIP", "externalIPs":["192.168.10.169"]}}'
+
+in extrnalIps you define the controlplane-nodes ip from your host, to get the ip simply do
+
+````
+hostname -i
+````
 </body>
 </html>
