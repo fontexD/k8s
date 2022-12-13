@@ -88,10 +88,10 @@ Next up is to install the Sidero components in your K8s providing all the requir
 ````
 export SIDERO_CONTROLLER_MANAGER_HOST_NETWORK=true
 export SIDERO_CONTROLLER_MANAGER_API_ENDPOINT=192.168.1.150 *
-export SIDERO_CONTROLLER_MANAGER_SIDEROLINK_ENDPOINT=192.168.1.150 **
+export SIDERO_CONTROLLER_MANAGER_SIDEROLINK_ENDPOINT=192.168.1.150 *
 
 clusterctl init -b talos -c talos -i sidero
 ````
-*/** This must be your Controle-plane node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes
+* This must be your Controle-plane node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes
 </body>
 </html>
