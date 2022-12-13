@@ -146,7 +146,7 @@ Now its time to configure your DHCP server with the config for the pxe-boot node
 ---
 So when a server is created in KVM it will get the pxe-boot from our current setup, and it will be added to the default serverclass called any, but we have to tell sidero metal where the disk device is located, so we must patch the default serverclass called any and add the shown config in the red area on the imae, after spec
  ```
- kubetcl edit serverclass any
+ kubetctl edit serverclass any
  ```
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/serverclass.png)
  ```
