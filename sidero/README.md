@@ -73,6 +73,15 @@ sudo curl -Lo /usr/local/bin/talosctl \
 "https://github.com/talos-systems/talos/releases/latest/download/talosctl-$(uname -s | tr '[:upper:]' '[:lower:]')-amd64"
 chmod +x /usr/local/bin/talosctl
 ````
-        
+    
+<b>ClusterCtl </b>
+     
+````
+sudo curl -Lo /usr/local/bin/clusterctl \
+"https://github.com/kubernetes-sigs/cluster-api/releases/download/v1.1.1/clusterctl-$(uname -s | tr '[:upper:]' '[:lower:]')-amd64" \
+sudo chmod +x /usr/local/bin/clusterctl
+````
+    
+       
 </body>
 </html>
