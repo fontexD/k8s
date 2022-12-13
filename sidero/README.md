@@ -171,7 +171,7 @@ change the red-marked field to true from false
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/autoaccept.png)
 
 
-Time to update the TalosOS versions from V0.14.00 (default) to V1.2.7, its used to install the node os, all fields must be 1.2.7 to change this
+Time to update the TalosOS versions from V0.14.0 (default) to V1.2.7, its used to install the node os, all fields must be 1.2.7 to change this
 ```
 kubectl edit environment default
 ```
