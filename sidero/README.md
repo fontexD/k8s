@@ -103,7 +103,7 @@ export SIDERO_CONTROLLER_MANAGER_SIDEROLINK_ENDPOINT=192.168.1.150 *
 
 clusterctl init -b talos -c talos -i sidero
 ````
-<i>* This must be your Controle-plane node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes </i>
+<i>* This must be your Controle-plane or Worker node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes </i>
 
 Next part is to open the services from sidero-system to for access from outside of the cluster, there are different ways to archive this, in this example ill use externalIP, this is nesswecary for following services in namespace sidero-system!
 - sidero-http
@@ -131,6 +131,11 @@ curl -I http://192.168.10.169:8081/tftp/ipxe.efi
 ````
 
  ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/curl.png)
+    
+It should return a 200 http response!
+
+Now its time to configure your DHCP server with the config for the pxe-boot nodes we are gonna use to create a Cluster, in the option field 66 add the ip which was assiged as externalIP earlier, in my setup i use Ubiquiti DHCP as shown below, for refrence on DHCP setup from Sidero Metal https://www.sidero.dev/v0.5/getting-started/prereq-dhcp/
+ ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/ubiquiti.png)
     
 </body>
 </html>
