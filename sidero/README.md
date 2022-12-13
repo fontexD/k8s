@@ -123,7 +123,8 @@ Now lets test if we can reach the boot file
 ````   
 curl -I http://192.168.10.169:8081/tftp/ipxe.efi
 ````
-![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/curl.png)
+
+ ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/curl.png)
     
-    </body>
+</body>
 </html>
