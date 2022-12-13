@@ -60,12 +60,14 @@ All of these areas are improved simply by having less.
         
 First of all is to install the Cli-Tools to make all of this possible
         
-        1.  '''
-        sudo curl -Lo /usr/local/bin/kubectl \
-        "https://dl.k8s.io/release/$(\
-         curl -L -s https://dl.k8s.io/release/stable.txt\
-         )/bin/linux/amd64/kubectl"
-        sudo chmod +x /usr/local/bin/kubectl
+        Install this on your K8s-Cluster controlplane Node
+        
+        1. TalosCtl 
+        '''
+sudo curl -Lo /usr/local/bin/talosctl \
+"https://github.com/talos-systems/talos/releases/latest/download/talosctl-$(uname -s | tr '[:upper:]' '[:lower:]')-amd64"
+chmod +x /usr/local/bin/talosctl
+
         '''
         
     </body>
