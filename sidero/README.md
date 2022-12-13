@@ -16,12 +16,12 @@
 | Libvirt/Kvm| V8.10.0 |
 
 <br>
-<b>This</b> is by far one of the best way to archive automation of K8s deployment and life cycle mangement ive come to experience so far, i used to do Terraform to provision VM 's and Ansible for configuration of the VM's, which is also and incredible nice way to do things!
+<b>This</b> is by far one of the best way to archive automation of K8s deployment and life cycle management ive come to experience so far, i used to do Terraform to provision VM 's and Ansible for configuration of the VM's, which is also and incredible nice way to do things!
 
 <br>
 <br>
 
-But it does require some maintanence and understandig of Ansible , Terraform and the whole mangement part of this including you have to spend time keeping your OS for every node up to date, installing required packages, making sure there is no broken parts on your os, all this taking your time from actually using k8s and not just keeping it alive and up to date!
+But it does require some  maintenance and understanding  of Ansible , Terraform and the whole management part of this including you have to spend time keeping your OS for every node up to date, installing required packages, making sure there is no broken parts on your os, all this taking your time from actually using k8s and not just keeping it alive and up to date!
 
 ## So what is Sidero Metal and Talos Os? 
 
@@ -68,7 +68,7 @@ All of these areas are improved simply by having less.
 - Dhcp Server with the ability to add option 66 and 67
 - Kvm/Libvirt Host
 
-<i>In this example im using a single node k8s-cluster, so rmemeber to remove taints from the controlplane if following this, else just deploy it on a worker node.</i>
+<i>In this example im using a single node k8s-cluster, so remember to remove taints from the controlplane if following this, else just deploy it on a worker node.</i>
         
 First of all is to install the Cli-Tools to make all of this possible
         
@@ -76,7 +76,7 @@ Install this on your K8s-cluster controlplane node
 
 <br>
         
-### CLi-tools and Componets
+### CLi-tools and Components
 ---
 <b>TalosCtl </b>
      
@@ -139,7 +139,7 @@ It should return a 200 http response!
 ### DHCP
 ---
 
-Now its time to configure your DHCP server with the config for the pxe-boot nodes we are gonna use to create a Cluster, in the option field 66 and 67 add the ip which was assiged as externalIP earlier in option 66, in option 67 define the filename ```undionly.kpxe``` in my setup i use Ubiquiti DHCP as shown below, for refrence on DHCP setup from Sidero Metal https://www.sidero.dev/v0.5/getting-started/prereq-dhcp/
+Now its time to configure your DHCP server with the config for the pxe-boot nodes we are going to use to create a Cluster, in the option field 66 and 67 add the ip which was assiged as externalIP earlier in option 66, in option 67 define the filename ```undionly.kpxe``` in my setup i use Ubiquiti DHCP as shown below, for refrence on DHCP setup from Sidero Metal https://www.sidero.dev/v0.5/getting-started/prereq-dhcp/
  ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/ubiquiti.png)
  
 ### Serverclass and Environment
@@ -178,7 +178,7 @@ kubectl edit environment default
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/environment.png)
 <br>
 <br>
-<b>Now</b> we are ready to Deploy the first node! im gonna create this with the Cockpit Web-ui from centOS, but can be done in any way wanted.
+<b>Now</b> we are ready to Deploy the first node! im going to create this with the Cockpit Web-ui from centOS, but can be done in any way wanted.
     
 This is how it should be created,
 set boot to network define vcpu and memoory as desired, set os to unknown and start it.
