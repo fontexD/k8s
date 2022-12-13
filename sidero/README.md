@@ -106,7 +106,7 @@ clusterctl init -b talos -c talos -i sidero
 ````
 <i>* This must be your Controle-plane or Worker node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes </i>
 
-Next part is to open the services from sidero-system to for access from outside of the cluster, there are different ways to archive this, in this example ill use externalIP, this is nesswecary for following services in namespace sidero-system!
+Next part is to open the services from sidero-system to for access from outside of the cluster, there are different ways to archive this, in this example ill use externalIP, this is necessary for following services in namespace sidero-system!
 - sidero-http
 - sidero-siderolink
 - sidero-tftp
