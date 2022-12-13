@@ -1,3 +1,9 @@
+[data-icon]:before {
+  font-family: icons; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
 
 ## Sidero Metal - Automation at the next level
 
@@ -46,4 +52,6 @@ All of these areas are improved simply by having less.
 Lets get onto it!
 
 prerequisite
-- A running k8s-cluster or single node dosent matter
+- A k8s-cluster or single node dosent matter
+- Dhcp Server witht the ability to add option 66 and 67
+- 
