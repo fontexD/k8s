@@ -119,8 +119,9 @@ kubectl patch svc sidero-tftp -n sidero-system -p '{"spec": {"type": "ClusterIP"
 ````
 
 Now lets test if we can reach the boot file
+
 ````   
- curl -I http://192.168.10.169:8081/tftp/ipxe.efi
+curl -I http://192.168.10.169:8081/tftp/ipxe.efi
 ````
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/curl.png)
     
