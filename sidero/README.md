@@ -181,7 +181,7 @@ kubectl edit environment default
 <b>Now</b> we are ready to Deploy the first node! im gonna create this with the Cockpit Web-ui from centOS, but can be done in any way wanted.
     
 This is how it should be created,
-set boot to network define vcpu and memoory as desired.
+set boot to network define vcpu and memoory as desired, set os to unknown and start it.
 
 ![alt text](https://github.com/fontexD/k8s/blob/main/sidero/images/vm.png)
 
