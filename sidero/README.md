@@ -144,7 +144,7 @@ Now its time to configure your DHCP server with the config for the pxe-boot node
  
 ### Serverclass and Environment
 
-So when a server is created in KVM it will get the pxe-boot from our current setup, and it will be added to the default serverclass called any, but we have to tell sidero metal where the disk device is located, so we must patch the default serverclass called any and add the shown config in the read area after spec
+So when a server is created in KVM it will get the pxe-boot from our current setup, and it will be added to the default serverclass called any, but we have to tell sidero metal where the disk device is located, so we must patch the default serverclass called any and add the shown config in the red area on the imae, after spec
  ```
  kubetcl edit serverclass any
  ```
@@ -155,6 +155,13 @@ So when a server is created in KVM it will get the pxe-boot from our current set
     path: /machine/install/disk
     value: /dev/sda
  ```
+
+Now we have to add auto-acceptance of servers so it accept em into the server-stack,¨' it can also be done by manually edit the server after its found by using 
+ ```
+ kubetcl get server
+ kubectl edit server <server_id>
+ ```
+and change the field acceptet to true
  
 </body>
 </html>
