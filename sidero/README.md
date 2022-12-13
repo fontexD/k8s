@@ -20,3 +20,24 @@ Sidero (“Iron” in Greek) is a project created by the Sidero Labs team. Sider
 Because of the design of Cluster API, there is inherently a “chicken and egg” problem: you need an existing Kubernetes cluster in order to provision the management plane, that can then provision more clusters. The initial management plane cluster that runs the Sidero Metal provider does not need to be based on Talos Linux - although it is recommended for security and stability reasons. The Getting Started guide will walk you through installing Sidero Metal either on an existing cluster, or by quickly creating a docker based cluster used to bootstrap the process
 
 // Description from Sidero MetalOwn Sites https://www.sidero.dev/v0.5/overview/introduction/
+
+
+### Talos os
+
+Talos is a container optimized Linux distro; a reimagining of Linux for distributed systems such as Kubernetes. Designed to be as minimal as possible while still maintaining practicality. For these reasons, Talos has a number of features unique to it:
+
+it is immutable
+it is atomic
+it is ephemeral
+it is minimal
+it is secure by default
+it is managed via a single declarative configuration file and gRPC API
+Talos can be deployed on container, cloud, virtualized, and bare metal platforms.
+
+Why Talos
+In having less, Talos offers more. Security. Efficiency. Resiliency. Consistency.
+
+All of these areas are improved simply by having less.
+
+// Description from Talos Os  Sites h[ttps://www.sidero.dev/v0.5/overview/introduction/](https://www.talos.dev/v1.2/introduction/what-is-talos/)
+
