@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis&display=swap">
 <html>
-    <body>
-
+<body>
 
 ## Sidero Metal - Automation at the next level
 
@@ -62,7 +61,7 @@ First of all is to install the Cli-Tools to make all of this possible
         
 Install this on your K8s-Cluster controlplane Node
         
-1. TalosCtl
+TalosCtl
      
 ````
 sudo curl -Lo /usr/local/bin/talosctl \
@@ -70,5 +69,5 @@ sudo curl -Lo /usr/local/bin/talosctl \
 chmod +x /usr/local/bin/talosctl
 ````
         
-    </body>
+</body>
 </html>
