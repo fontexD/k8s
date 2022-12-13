@@ -62,13 +62,12 @@ First of all is to install the Cli-Tools to make all of this possible
         
         Install this on your K8s-Cluster controlplane Node
         
-        1. TalosCtl 
-        '''
+1. TalosCtl 
+'''
 sudo curl -Lo /usr/local/bin/talosctl \
 "https://github.com/talos-systems/talos/releases/latest/download/talosctl-$(uname -s | tr '[:upper:]' '[:lower:]')-amd64"
 chmod +x /usr/local/bin/talosctl
-
-        '''
+'''
         
     </body>
 </html>
