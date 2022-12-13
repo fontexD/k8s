@@ -6,7 +6,7 @@
 
 | Application | Version |
 | ------------- | ------------- |
-| Kubernetes  | V1.24.0  |
+| Kubernetes  | V1.24  |
 | CentOS Stream  | V9.0  |
 | Unifi DHCP| V7.0.2 |
 
