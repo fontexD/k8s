@@ -2,7 +2,7 @@
 ## Sidero Metal - Automation at the next level
 
 
-| Application/Os | Version |
+| Application | Version |
 | ------------- | ------------- |
 | Kubernetes  | 1.24.0  |
 | CentOS Stream  | 9.0  |
