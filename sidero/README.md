@@ -104,7 +104,13 @@ Next part is to open the services from sidero-system to for access from outside 
 - sidero-siderolink
 - sidero-tftp
 
-A Easy way to add this to your services is with following command
+in extrnalIPs you define the controlplane-nodes ip from your host, to get the ip simply do
+
+````
+hostname -i
+````
+
+A easy method to add this to your services is with following command
 
 ````    
 kubectl patch svc sidero-http -n sidero-system -p '{"spec": {"type": "ClusterIP", "externalIPs":["192.168.10.169"]}}'
@@ -112,10 +118,5 @@ kubectl patch svc sidero-siderolink -n sidero-system -p '{"spec": {"type": "Clus
 kubectl patch svc sidero-tftp -n sidero-system -p '{"spec": {"type": "ClusterIP", "externalIPs":["192.168.10.169"]}}'
 ````
 
-in extrnalIps you define the controlplane-nodes ip from your host, to get the ip simply do
-
-````
-hostname -i
-````
 </body>
 </html>
