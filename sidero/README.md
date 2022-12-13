@@ -2,7 +2,7 @@
 ## Sidero Metal - Automation at the next level
 
 
-What ive used in this Article
+<i>What ive used in this Article</i>
 
 | Application | Version |
 | ------------- | ------------- |
