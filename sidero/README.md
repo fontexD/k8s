@@ -54,8 +54,19 @@ All of these areas are improved simply by having less.
         
 <b>Prerequisite</b>
 - A k8s-cluster or single node dosent matter
-- Dhcp Server witht the ability to add option 66 and 67
+- Dhcp Server with the ability to add option 66 and 67
 - Kvm/Libvirt Host
+        
+        
+First of all is to install the Cli-Tools to make all of this possible
+        
+        1.  '''
+        sudo curl -Lo /usr/local/bin/kubectl \
+  "https://dl.k8s.io/release/$(\
+  curl -L -s https://dl.k8s.io/release/stable.txt\
+  )/bin/linux/amd64/kubectl"
+sudo chmod +x /usr/local/bin/kubectl
+        '''
         
     </body>
 </html>
