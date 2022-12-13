@@ -1,8 +1,12 @@
-/* Same CSS as above, plus */
-
-.icon-alone {
-  display: inline-block; /* Chrome 19 was weird with clickability without this */
-}
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="https://legoman8304.github.io/style.css">
+<html>
+    <body>
+        <h1>Hello World</h1>
+        <p>I'm under construction!</p>
+        <h6>Copyright MIT Licence 2018</h6>
+    </body>
+</html>
 
 .screen-reader-text { /* Reusable, toolbox kind of class */
   position: absolute;
