@@ -51,8 +51,8 @@ All of these areas are improved simply by having less.
 <br>
         
 ## Lets get onto it!
-
-        <b> Prerequisite </b>
+        
+<b>Prerequisite</b>
 - A k8s-cluster or single node dosent matter
 - Dhcp Server witht the ability to add option 66 and 67
 - Kvm/Libvirt Host
