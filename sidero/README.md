@@ -92,6 +92,6 @@ export SIDERO_CONTROLLER_MANAGER_SIDEROLINK_ENDPOINT=192.168.1.150 *
 
 clusterctl init -b talos -c talos -i sidero
 ````
-* This must be your Controle-plane node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes
+<i>* This must be your Controle-plane node ip, since the sidero-componentes expose themself via that ip for accessing the pxe boot and config to provide clusters from the provisioned nodes </i>
 </body>
 </html>
