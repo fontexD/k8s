@@ -1,0 +1,92 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"name":"synology-csi-snapshotter","namespace":"synology-csi"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"synology-csi-snapshotter"}},"serviceName":"synology-csi-snapshotter","template":{"metadata":{"labels":{"app":"synology-csi-snapshotter"}},"spec":{"containers":[{"args":["--v=5","--csi-address=$(ADDRESS)"],"env":[{"name":"ADDRESS","value":"/var/lib/csi/sockets/pluginproxy/csi.sock"}],"image":"k8s.gcr.io/sig-storage/csi-snapshotter:v4.2.1","imagePullPolicy":"Always","name":"csi-snapshotter","securityContext":{"allowPrivilegeEscalation":true,"capabilities":{"add":["SYS_ADMIN"]},"privileged":true},"volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"}]},{"args":["--nodeid=NotUsed","--endpoint=$(CSI_ENDPOINT)","--client-info","/etc/synology/client-info.yml","--log-level=info"],"env":[{"name":"CSI_ENDPOINT","value":"unix:///var/lib/csi/sockets/pluginproxy/csi.sock"}],"image":"synology/synology-csi:v1.1.1","imagePullPolicy":"IfNotPresent","name":"csi-plugin","securityContext":{"allowPrivilegeEscalation":true,"capabilities":{"add":["SYS_ADMIN"]},"privileged":true},"volumeMounts":[{"mountPath":"/var/lib/csi/sockets/pluginproxy/","name":"socket-dir"},{"mountPath":"/etc/synology","name":"client-info","readOnly":true}]}],"hostNetwork":true,"serviceAccountName":"csi-snapshotter-sa","volumes":[{"emptyDir":{},"name":"socket-dir"},{"name":"client-info","secret":{"secretName":"client-info-secret"}}]}}}}
+  creationTimestamp: "2023-01-06T16:11:42Z"
+  generation: 2
+  name: synology-csi-snapshotter
+  namespace: synology-csi
+  resourceVersion: "3943742"
+  uid: 1beee3aa-9a37-4dcf-b3d7-7190d2ec9746
+spec:
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: synology-csi-snapshotter
+  serviceName: synology-csi-snapshotter
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2023-01-06T17:18:01+01:00"
+      creationTimestamp: null
+      labels:
+        app: synology-csi-snapshotter
+    spec:
+      containers:
+      - args:
+        - --v=5
+        - --csi-address=$(ADDRESS)
+        env:
+        - name: ADDRESS
+          value: /var/lib/csi/sockets/pluginproxy/csi.sock
+        image: k8s.gcr.io/sig-storage/csi-snapshotter:v4.2.1
+        imagePullPolicy: Always
+        name: csi-snapshotter
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/csi/sockets/pluginproxy/
+          name: socket-dir
+      - args:
+        - --nodeid=NotUsed
+        - --endpoint=$(CSI_ENDPOINT)
+        - --client-info
+        - /etc/synology/client-info.yml
+        - --log-level=info
+        env:
+        - name: CSI_ENDPOINT
+          value: unix:///var/lib/csi/sockets/pluginproxy/csi.sock
+        image: synology/synology-csi:v1.1.1
+        imagePullPolicy: IfNotPresent
+        name: csi-plugin
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: true
+          capabilities:
+            add:
+            - SYS_ADMIN
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /var/lib/csi/sockets/pluginproxy/
+          name: socket-dir
+        - mountPath: /etc/synology
+          name: client-info
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      hostNetwork: true
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: csi-snapshotter-sa
+      serviceAccountName: csi-snapshotter-sa
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: socket-dir
+      - name: client-info
+        secret:
+          defaultMode: 420
+          secretName: client-info-secret
